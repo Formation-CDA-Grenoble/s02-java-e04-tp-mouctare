@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Properties;
+
 import app.Character;
 
 public class App {
@@ -17,6 +19,7 @@ public class App {
             }
             System.out.println(message);
         }
+ 
         
         
           
@@ -25,16 +28,16 @@ public class App {
         
         
     public static void main(String[] args) throws Exception {
+            Character mario;
+        
     
-        
-        
         /*
         * 1. Dieu créa Mario
         * =====================================================================
         * Décommente le code ci-dessous lorsque tu atteins cette partie
         */
-        // mario = createCharacter();
-        // test("mario.getLives()", mario.getLives(), 3);
+        mario = createCharacter();
+        test("mario.getLives()", mario.getLives(), 3);
 
 
 
