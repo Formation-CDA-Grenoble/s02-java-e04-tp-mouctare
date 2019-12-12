@@ -3,7 +3,7 @@ package app;
 import app.Character;
 
 public class App {
-
+//i 
     private static boolean isEqual(Object value1, Object value2) {
         return value1 == value2;
     }
