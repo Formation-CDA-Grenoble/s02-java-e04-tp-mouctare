@@ -3,9 +3,9 @@ package app;
 import app.Character;
 
 public class App {
-        private  static boolean isEqual(Object value1, Object value2){
-
-            return  value1 == value2; 
+        private  static Character createCharacter(){
+            System.out.println();
+            return new Character();
 
             
         
@@ -13,7 +13,7 @@ public class App {
     public static void main(String[] args) throws Exception {
     
         
-        System.out.println(isEqual(6, 6));
+        
         /*
         * 1. Dieu créa Mario
         * =====================================================================
