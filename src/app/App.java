@@ -3,13 +3,27 @@ package app;
 import app.Character;
 
 public class App {
-        private  static Character createCharacter(){
-            System.out.println();
-            return new Character();
+
+    private static boolean isEqual(Object value1, Object value2) {
+        return value1 == value2;
+    }
+        private  static  void test(String call, Object actualValue, Object expectedValue ){
+        
+            String message = "L'appel  " + call + "  renvoie: " + String.valueOf(actualValue) + ". (valeur attendue: " + expectedValue + ")  ";
+            if (isEqual(actualValue, expectedValue)) {
+                message += "C'est bon! ☑️";
+            } else {
+                message += "Encore un coup des Illuminati... ❔";
+            }
+            System.out.println(message);
+        }
+        
+        
+          
 
             
         
-        }
+        
     public static void main(String[] args) throws Exception {
     
         
