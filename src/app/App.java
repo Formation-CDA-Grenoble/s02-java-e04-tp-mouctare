@@ -19,7 +19,10 @@ public class App {
         }
         
         
-          
+        private static Character createCharacter() {
+            System.out.println("Créons Mario avec 3 vies...");
+            return new Character(3);
+        }   
 
             
         
@@ -71,16 +74,16 @@ public class App {
         System.out.println("Mario ramasse un champignon...");
          mario.pickUpMushroom();
          test("mario.getIsBig()", mario.getIsBig(), true);
-        // System.out.println("Mario ramasse un autre champignon...");
-        // mario.pickUpMushroom();
-        // test("mario.getIsBig()", mario.getIsBig(), true);
-        // System.out.println("Mario prend un coup...");
-        // mario.takeHit();
-        // test("mario.getIsBig()", mario.getIsBig(), false);
-        // System.out.println("Mario prend un autre coup...");
-        // mario.takeHit();
-        // test("mario.getIsBig()", mario.getIsBig(), false);
-        // test("mario.getLives()", mario.getLives(), 2);
+        System.out.println("Mario ramasse un autre champignon...");
+        mario.pickUpMushroom();
+        test("mario.getIsBig()", mario.getIsBig(), true);
+        System.out.println("Mario prend un coup...");
+        mario.takeHit();
+        test("mario.getIsBig()", mario.getIsBig(), false);
+        System.out.println("Mario prend un autre coup...");
+        mario.takeHit();
+        test("mario.getIsBig()", mario.getIsBig(), false);
+        test("mario.getLives()", mario.getLives(), 2);
 
 
 
@@ -89,21 +92,21 @@ public class App {
         * =====================================================================
         * Décommente le code ci-dessous lorsque tu atteins cette partie
         */
-        // mario = createCharacter();
-        // test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), false);
-        // System.out.println("Mario ramasse une étoile...");
-        // mario.pickUpStar();
-        // test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), true);
-        // System.out.println("Mario prend un coup...");
-        // mario.takeHit();
-        // test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), true);
-        // test("mario.getLives()", mario.getLives(), 3);
-        // System.out.println("L'effet de l'étoile se dissipe...");
-        // mario.invulnerableWearsOff();
-        // test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), false);
-        // System.out.println("Mario prend un coup...");
-        // mario.takeHit();
-        // test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), false);
-        // test("mario.getLives()", mario.getLives(), 2);
+        mario = createCharacter();
+        test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), false);
+        System.out.println("Mario ramasse une étoile...");
+        mario.pickUpStar();
+        test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), true);
+        System.out.println("Mario prend un coup...");
+        mario.takeHit();
+        test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), true);
+        test("mario.getLives()", mario.getLives(), 3);
+        System.out.println("L'effet de l'étoile se dissipe...");
+        mario.invulnerableWearsOff();
+        test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), false);
+        System.out.println("Mario prend un coup...");
+        mario.takeHit();
+        test("mario.getIsInvulnerable()", mario.getIsInvulnerable(), false);
+        test("mario.getLives()", mario.getLives(), 2);
     }
 }

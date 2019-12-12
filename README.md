@@ -103,10 +103,13 @@ Nous avons maintenant besoin de pouvoir accéder à la propriété **lives** de 
 Comme nous préférons que seul le personnage lui-même soit capable de modifier sa propre quantité de vies, passe la propriété **lives** en **privé**.
 
 Tu dois ensuite coder les méthodes suivantes:
-
+                return life
 - **getLives**: renvoie le nombre de vies.
+                life +1
 - **addLife**: ajoute une vie.
+                life -1
 - **loseLife**: retire une vie.
+
 - **hasLives**: permet de savoir si le personnage a encore au moins une vie.
 
 <details>
@@ -128,6 +131,7 @@ Tu dois ensuite coder les méthodes suivantes:
 
 - **getIsBig**: renvoie la valeur de **isBig**.
 - **pickUpMushroom**: permet à Mario de devenir grand.
+    isBig = vrai isBig = faux
 - **takeHit**: si Mario est grand, il redevient petit. S'il était déjà petit, il perd une vie.
 
 ### 4. La tête dans les étoiles

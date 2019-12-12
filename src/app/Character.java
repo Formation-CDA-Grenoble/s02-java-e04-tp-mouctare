@@ -2,33 +2,61 @@ package app;
 
 class Character {
 
-  private  int lives;
- private boolean isBig;
+    private  int lives;
+    private boolean isBig;
+    private boolean isInvulnerable ;
+    
+    Character(int number){
+        lives=number;
+
+    }
+
+
+
     public  int getLives(){
-  return lives;
+        return lives;
     }
 
     public void  addLife (){
        lives ++;
     }
     public void loseLife(){
-    lives --;
+        lives --;
     }
     public boolean hasLives(){
-        if (lives < 0){
-        return true; }
+        if (lives > 0){
+            return true; }
         else{
-        return false;}
+         return false;
+        }
     }
       
 
-       public  boolean  getIsBig (){
+    public  boolean  getIsBig (){
            return isBig;
-       }
-       public void pickUpMushroom(){
+    }
+       
+    public void pickUpMushroom(){
         isBig = true;
-       }
-        public void takeHit(){
+    }
+      
+       public void takeHit(){
           isBig = false;
         }
+    public boolean getIsInvulnerable(){
+            return isInvulnerable;
+        }
+    public void pickUpStar(){
+    
+        isInvulnerable = true;
+    }
+
+   public void invulnerableWearsOff(){
+     isInvulnerable = false; 
+    }
+    
+
+
+
 }
+
